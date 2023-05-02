@@ -18,34 +18,27 @@
         imagecopyresized($newimage,$source,0,0,0,0,$nwidth,$nheight,$width,$height);
         $file_name = time().'.jpg';
         imagejpg($newimage,'upload/'.$file_name);
-
-        header("location:index.php?msg=1");
     }
     elseif($_FILES['file']['type'] == 'image/png'){
         $source = imagecreatefrompng($file);
         imagecopyresized($newimage,$source,0,0,0,0,$nwidth,$nheight,$width,$height);
         $file_name = time().'.png';
         imagepng($newimage,'upload/'.$file_name);
-        
-        header("location:index.php?msg=1");
     }
     elseif($_FILES['file']['type'] == 'image/gif'){
         $source = imagecreatefromgif($file);
         imagecopyresized($newimage,$source,0,0,0,0,$nwidth,$nheight,$width,$height);
         $file_name = time().'.gif';
         imagegif($newimage,'upload/'.$file_name);
-
-        header("location:index.php?msg=1");
     }
     elseif($_FILES['file']['type'] == 'image/jpeg'){
         $source = imagecreatefromjpeg($file);
         imagecopyresized($newimage,$source,0,0,0,0,$nwidth,$nheight,$width,$height);
         $file_name = time().'.jpg';
         imagejpeg($newimage,'upload/'.$file_name);
-
-        header("location:index.php?msg=1");
     }
-    else{
-        echo "Please select only jpg, jpeg, png and gif image";
-    }
+    
+    // else{
+    //     echo "Please select only jpg, jpeg, png and gif image";
+    // }
 ?>

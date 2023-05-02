@@ -8,7 +8,7 @@
 <body>
 
 <form action="upload.php" method="post" enctype="multipart/form-data">
-    <input type="file" name="file" required>
+    <input type="file" name="file" required accept=".jpg, .png, .jpeg, .gif">
     <input type="submit" name="submit"/>
 </form>
 
